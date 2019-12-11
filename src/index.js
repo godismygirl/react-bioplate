@@ -2,6 +2,8 @@ import React from 'react';
 import { render } from 'react-dom';
 import 'babel-polyfill';
 import * as OfflinePluginRuntime from 'offline-plugin/runtime';
+import { StoreContext } from 'redux-react-hook';
+import createStore from '@/utils/createStore';
 
 import App from './application/App';
 import Worker from './service/worker';
@@ -19,4 +21,14 @@ worker.expensive(1000).then(count => {
   console.log(`Ran ${count} loops`);
 });
 
-render(<App title="Webpack 4 Demo" />, document.querySelector('#root'));
+const store = createStore({
+  isUpdated: false,
+  todos: ['Make the fire!', 'Fix the breakfast!', 'Wash the dishes!', 'Do the mopping!']
+});
+
+render(
+  <StoreContext.Provider value={store}>
+    <App title="Webpack 4 Demo" />
+  </StoreContext.Provider>,
+  document.querySelector('#root')
+);

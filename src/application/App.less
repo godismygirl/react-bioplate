@@ -1,7 +1,7 @@
-@import "~antd/dist/antd.css";
+@import '~antd/dist/antd.css';
 
-body{
-  max-width: 100%!important;
+body {
+  max-width: 100% !important;
 }
 .App__container {
   height: 100%;
@@ -14,15 +14,22 @@ body{
   position: relative;
 
   .App__header {
-
     flex: 150px 0 0;
     padding: 20px;
     text-align: center;
 
     color: white;
     background: #4da0b0; /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #4da0b0, #d39d38); /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #4da0b0, #d39d38); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: -webkit-linear-gradient(
+      to right,
+      #4da0b0,
+      #d39d38
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #4da0b0,
+      #d39d38
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
     .App__logo {
       animation: App__logo--spin infinite 20s linear;
@@ -34,7 +41,10 @@ body{
     flex: 10% 1 1;
     height: 10%;
   }
+}
 
+.test {
+  background: red;
 }
 
 @keyframes App__logo--spin {

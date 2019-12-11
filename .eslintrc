@@ -12,6 +12,7 @@
   "rules": {
     "function-paren-newline": "off",
     "import/no-extraneous-dependencies": "off",
+    "import/no-unres": "off",
     "react/static-property-placement": "off",
     "react/no-unused-state": "warn",
     "comma-dangle": "off",

@@ -15,8 +15,7 @@ const moduleCSSLoader = {
       localIdentName: '[path][name]__[local]__[hash:base64:5]'
     },
     sourceMap: true,
-    importLoaders: 2,
-    
+    importLoaders: 2
   }
 };
 
@@ -26,10 +25,14 @@ const fontsOptions = {
   name: 'fonts/[name].[ext]'
 };
 
+console.log(path.resolve(__dirname, '../src'));
 module.exports = {
   context: path.resolve(__dirname, '../'),
   resolve: {
-    extensions: ['.js', '.jsx', '.css']
+    extensions: ['.js', '.jsx', '.css'],
+    alias: {
+      '@': PATHS.src
+    }
   },
   entry: {
     app: PATHS.src
